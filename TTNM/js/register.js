@@ -40,6 +40,12 @@ function registerSubmit() {
     }
 
     alert('Register success!');
+    localStorage.setItem('username', "");
+    localStorage.setItem('email', email[0].value);
+    localStorage.setItem('password', password[0].value);
+    localStorage.setItem('phone', "");
+    
+    location.href='login.html';
     return false;
 }
 

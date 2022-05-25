@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="Icon" href="/images/logo.png">
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -16,7 +17,7 @@
 
 </head>
 
-<body>
+<body onload="load()">
     <div class="logo" style="background-color: black;">
         <a href="#">
             <img src="images/logo.png" alt="logo">
@@ -30,7 +31,7 @@
             <input type="file" id="file">
             <label for="file" id="uploadBtn">Choose Photo</label>
         </div>
-        <form method="post" id="frmLogin" onsubmit="return loginSubmit()">
+        <form method="get" id="frmLogin" onsubmit="return false">
             <!-- <div class="form-sub">
                 <span class="iconify icon" data-icon="bx:user" style="color: #55bdc1;"></span>
                 <input type="text" name="username" placeholder="Username" required autofocus autocomplete="off">
@@ -48,8 +49,7 @@
                 <!-- <span class="iconify icon" data-icon="arcticons:huawei-email" style="color: #55bdc1;"></span> -->
                 <!-- <span class="iconify icon" data-icon="clarity:email-line" style="color: #55bdc1;"></span> -->
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter email" autofocus autocomplete="off"
-                    disabled>
+                <input type="email" id="email" name="email" placeholder="Enter email" style="background-color: rgb(219, 221, 224); color: rgb(125, 125, 145);" autofocus autocomplete="off" disabled>
             </div>
 
             <div class="form-sub">
@@ -61,7 +61,7 @@
             <div class="group-button">
                 <div class="submit">
                     <!-- <input type="submit" value="SIGN IN" onclick="loginSubmit()"/> -->
-                    <input type="submit" value="SAVE" />
+                    <input type="submit" value="SAVE" onclick="changeProfile()"/>
                 </div>
 
                 <div class="changePass">

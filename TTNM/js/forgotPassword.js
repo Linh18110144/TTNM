@@ -13,7 +13,7 @@ function forgotPassSubmit() {
     }
 
     alert('Check mail to recive OTP code!');
-    return false;
+    window.location.href="OTP.html";
 }
 
 function OTPSubmit() {
@@ -26,12 +26,12 @@ function OTPSubmit() {
     }
 
     if (OTP[0].value != '1234') {
-        document.getElementById('alert').innerHTML = "OPT code not true. Try again!";
+        document.getElementById('alert').innerHTML = "OTP code not true. Try again!";
         return false;
     }
 
     alert('Enter OTP code success!');
-    return false;
+    window.location.href="resetPassword.html";
 }
 
 function resetPassSubmit() {
@@ -58,7 +58,7 @@ function resetPassSubmit() {
     }
 
     alert('Reset password success!');
-    return false;
+    window.location.href="login.html";
 }
 
 function validatePassword(password) {

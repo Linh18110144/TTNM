@@ -43,6 +43,8 @@ body{
     width: 30%;
     border: 2px solid #6DFFE7;
     padding: 10px 40px 30px 40px;
+	box-shadow: 2px 2px #a0f1ff ;
+	border-radius: 8px;
 }
 
 .main-container h1{
@@ -51,6 +53,8 @@ body{
     text-align: center;
     margin-bottom: 1em;
     letter-spacing: 2px;
+	text-shadow: 2px 2px #424849;
+
 }
 
 /* h1{
@@ -113,6 +117,8 @@ input[type="submit"] {
     margin-bottom: 1em;
     background: transparent;
     border: 2px solid #55BDC0;
+	box-shadow: 1px 1px #a0f1ff ;
+
 }
 
 input[type="submit"]:hover{
@@ -123,6 +129,8 @@ input[type="submit"]:hover{
     -moz-transition: 0.3s all;
     -o-transition: 0.3s all;
     -ms-transition: 0.3s all;
+	box-shadow: 0 0 #174849 ;
+
 }
 
 .icon{

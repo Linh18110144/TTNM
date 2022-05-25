@@ -42,13 +42,19 @@ function loginSubmit() {
     //     return false;
     // }
 
-    if (email[0].value != 'abc@gmail.com' || password[0].value != 'aA@123456') {
+    if (email[0].value != localStorage.getItem('email') || password[0].value != localStorage.getItem('password')) {
         document.getElementById('alert').innerHTML = "Email or password not true!";
         return false;
     }
 
     alert('Login success!');
-    return false;
+    
+    // localStorage.setItem('username', "");
+    // localStorage.setItem('email', email[0].value);
+    // localStorage.setItem('password', password[0].value);
+    // localStorage.setItem('phone', "");
+
+    window.location.href="home.html";
 }
 
 function validatePassword(password) {

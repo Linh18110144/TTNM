@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot password</title>
+    <link rel="Icon" href="/images/logo.png">
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -25,15 +26,17 @@
     <div class="main-container">
         <h1>Enter OTP</h1>
         <div id="alert"></div>
-        <form action="#" method="post" onsubmit="return OTPSubmit()">
+        <form action="#" method="post" onsubmit="return false">
             <div class="form-sub">
                 <!-- <span class="iconify icon" data-icon="arcticons:huawei-email" style="color: #55bdc1;"></span> -->
                 <!-- <span class="iconify icon" data-icon="clarity:email-line" style="color: #55bdc1;"></span> -->
                 <input type="text" name="OTP" placeholder="Enter OTP" >
             </div>
 
+            <div style="color: #e8f349;"> Note: OTP code is valid for only 1 minute </div>
+
             <div class="submit">
-                <input type="submit" value="SUBMIT" />
+                <input type="submit" value="SUBMIT" onclick="OTPSubmit()" />
             </div>
 
             <div class="form-footer">

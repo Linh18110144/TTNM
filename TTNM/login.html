@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="Icon" href="/images/logo.png">
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -25,7 +26,7 @@
     <div class="main-container">
         <h1>Sign In</h1>
         <div id="alert"></div>
-        <form method="post" id="frmLogin" onsubmit="return loginSubmit()">
+        <form action="#" method="post" id="frmLogin" onsubmit="return false">
             <!-- <div class="form-sub">
                 <span class="iconify icon" data-icon="bx:user" style="color: #55bdc1;"></span>
                 <input type="text" name="username" placeholder="Username" required autofocus autocomplete="off">
@@ -46,15 +47,15 @@
             <span style="color: #CBD2DA;"><input type="checkbox" /> Remember me</span>
             <div class="submit">
                 <!-- <input type="submit" value="SIGN IN" onclick="loginSubmit()"/> -->
-                <input type="submit" value="SIGN IN" />
+                <input type="submit" value="SIGN IN" onclick="loginSubmit()"/>
             </div>
 
             <div class="form-footer" style="font-size:small;">
-                <a href="/forgotPassword.html">Forgot password?</a>
+                <a href="forgotPassword.html">Forgot password?</a>
             </div>
 
             <div class="form-footer">
-                <span style="color: #ffffff;">Don't have an account?</span> <a href="/register.html">Register now</a>
+                <span style="color: #ffffff;">Don't have an account?</span> <a href="register.html">Register now</a>
             </div>
         </form>
     </div>
