@@ -83,3 +83,7 @@ function validatePassword(password) {
 
     return true;
 }
+
+function load(){
+    document.getElementById('name_user').innerHTML=localStorage.getItem('username');
+}

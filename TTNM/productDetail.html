@@ -17,12 +17,111 @@
 
 </head>
 
-<body>
-    <div class="logo" style="background-color: black;">
-        <a href="#">
-            <img src="images/logo.png" alt="logo">
+<body onload="load()">
+    <!-- <div class="nav">
+        <div class="logo" style="background-color: black;">
+            <a href="#">
+                <img src="images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div style="width: 950px;"></div>
+        <div style="width: 15%; display: flex; align-items: center; ">
+            <div class="dropdown">
+                <div style=" display: flex;  align-items: center; justify-content: space-between; ">
+                    <div id="name_user" style="color: white; margin-right: 20px;"></div>
+                    <div class="img_user">
+                         <img src="./images/young-user-icon.png" id="profile-img" width="40px" height="40px">
+                    </div>
+                </div>
+                <div class="dropdown-content">
+                <div class="btn-user" onclick="location.href='profile.html'">Profile</div>
+                <hr/>
+                <div class="btn-user" >Log out!</div>
+                </div>
+              </div>
+        </div>
+    </div> -->
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="">
         </a>
-    </div>
+    
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#products">products</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+       
+    
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    
+        <div style="width: 15%; display: flex; align-items: center; ">
+            <div class="dropdown">
+                <div style=" display: flex;  align-items: center; justify-content: space-between; font-size: medium;">
+                    <div id="name_user" style="color: white; margin-right: 20px;"></div>
+                    <div class="img_user">
+                         <img src="./images/young-user-icon.png" id="profile-img" width="40px" height="40px">
+                    </div>
+                </div>
+                <div class="dropdown-content">
+                <div class="btn-user" onclick="location.href='profile.html'">Profile</div>
+                <hr/>
+                <div class="btn-user" >Log out!</div>
+                </div>
+              </div>
+        </div>
+    
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/cart-item-1.png" alt="">
+                <div class="content">
+                    <h3>cart item 01</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/cart-item-2.png" alt="">
+                <div class="content">
+                    <h3>cart item 02</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/cart-item-3.png" alt="">
+                <div class="content">
+                    <h3>cart item 03</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/cart-item-4.png" alt="">
+                <div class="content">
+                    <h3>cart item 04</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <a href="#" class="btn">checkout now</a>
+        </div>
+    
+    </header>
     <div class="main-container">
         <div class="left-container">
             <div class="image">
@@ -30,10 +129,12 @@
             </div>
             <div class="small_image">
                 <div class="small">
-                    <img src="/images/product-1.png" alt="" width="75px" height="110px" id="img1" onclick="chooseImg1()">
+                    <img src="/images/product-1.png" alt="" width="75px" height="110px" id="img1"
+                        onclick="chooseImg1()">
                 </div>
                 <div class="small">
-                    <img src="/images/product-2.png" alt="" width="75px" height="110px" id="img2" onclick="chooseImg2()">
+                    <img src="/images/product-2.png" alt="" width="75px" height="110px" id="img2"
+                        onclick="chooseImg2()">
                 </div>
             </div>
         </div>
@@ -71,7 +172,7 @@
                     <span class="discount">Discount 5%</span>
                 </div>
                 <div class="flash">
-                    <span>FLASH SALE</span> 
+                    <span>FLASH SALE</span>
                     Start 19:00, 26.05
                 </div>
             </div>

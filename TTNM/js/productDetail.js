@@ -11,3 +11,7 @@ function chooseImg2(){
     // let value = document.getElementById('img1').src.value;
     document.getElementById('bigImg').src='/images/product-2.png';
 }
+
+function load(){
+    document.getElementById('name_user').innerHTML=localStorage.getItem('username');
+}

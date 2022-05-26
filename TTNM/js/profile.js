@@ -8,6 +8,9 @@ function load() {
     email.value=localStorage.getItem('email');
     phone.value=localStorage.getItem('phone');
 
+    document.getElementById('name_user').innerHTML=localStorage.getItem('username');
+
+
 }
 
 function changeProfile(){

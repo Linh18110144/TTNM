@@ -40,7 +40,7 @@ function registerSubmit() {
     }
 
     alert('Register success!');
-    localStorage.setItem('username', "");
+    localStorage.setItem('username', username[0].value);
     localStorage.setItem('email', email[0].value);
     localStorage.setItem('password', password[0].value);
     localStorage.setItem('phone', "");
