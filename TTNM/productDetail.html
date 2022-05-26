@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartegory</title>
+    <link rel="Icon" href="/images/logo.png">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/productDetail.css">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+</head>
+
+<body>
+    <div class="logo" style="background-color: black;">
+        <a href="#">
+            <img src="images/logo.png" alt="logo">
+        </a>
+    </div>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="image">
+                <img src="/images/product-1.png" alt="" width="200px" height="302px" id="bigImg">
+            </div>
+            <div class="small_image">
+                <div class="small">
+                    <img src="/images/product-1.png" alt="" width="75px" height="110px" id="img1" onclick="chooseImg1()">
+                </div>
+                <div class="small">
+                    <img src="/images/product-2.png" alt="" width="75px" height="110px" id="img2" onclick="chooseImg2()">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right-container">
+
+            <div class="name_product">Coffee <span>TRADITION COLUMBIA</span> 100% Organic</div>
+            <div class="rate">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span>(2500Comment) | 1000+</span>
+            </div>
+
+            <div class="price">
+                <div>
+                    <span style="font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 55px;
+                        line-height: 67px;color: #F32424;">
+                        $15.99
+                    </span>
+                    <span style="font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 24px;color: #251D3A; text-decoration: line-through;">
+                        $20.99
+                    </span>
+                    <span style="font-size: 55px; ">|</span>
+                    <span class="discount">Discount 5%</span>
+                </div>
+                <div class="flash">
+                    <span>FLASH SALE</span> 
+                    Start 19:00, 26.05
+                </div>
+            </div>
+            <div
+                style="width: 200px;display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <div> Quantity</div>
+                <div class="buttons-added">
+                    <input class="minus is-form" type="button" value="-">
+                    <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+                    <input class="plus is-form" type="button" value="+">
+                </div>
+            </div>
+
+            <div style="display: flex;">
+                <div class="btn_add" onclick="addToCart()">
+                    <span class="iconify" data-icon="carbon:shopping-cart-plus"
+                        style="color: white !important; font-size: 40px;"></span>
+                    Add to cart
+                </div>
+                <div class="btn_buy" onclick="location.href='cart.html'">
+                    BUY
+                </div>
+            </div>
+
+            <div class="decribe">
+                <h2 style="margin-bottom: 10px;">Product Description</h2>
+                <div>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic doloribus molestias nesciunt possimus?
+                    Modi vitae assumenda suscipit voluptatibus? Dignissimos cum quisquam doloribus ullam temporibus
+                    pariatur, accusantium ex nisi repellendus repellat!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab velit eos modi adipisci fugit culpa
+                    soluta fugiat sapiente, suscipit nostrum porro incidunt nam assumenda, consequuntur numquam
+                    voluptatibus alias officiis!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis eius provident architecto, debitis
+                    culpa voluptatum reiciendis mollitia laudantium voluptas atque, consequatur sequi aliquam optio
+                    magni deleniti natus enim, cupiditate temporibus.
+                </div>
+                <br>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- custom js file link  -->
+    <script src="js/productDetail.js"></script>
+
+    <script>
+        $('input.input-qty').each(function () {
+            var $this = $(this),
+                qty = $this.parent().find('.is-form'),
+                min = Number($this.attr('min')),
+                max = Number($this.attr('max'))
+            if (min == 0) {
+                var d = 0
+            } else d = min
+            $(qty).on('click', function () {
+                if ($(this).hasClass('minus')) {
+                    if (d > min) d += -1
+                } else if ($(this).hasClass('plus')) {
+                    var x = Number($this.val()) + 1
+                    if (x <= max) d += 1
+                }
+                $this.attr('value', d).val(d)
+            })
+        })
+    </script>
+</body>
+
+</html>
