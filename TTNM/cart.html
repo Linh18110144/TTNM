@@ -23,7 +23,7 @@
         <a href="index.html" class="logo">
             <img src="images/logo.png" alt="">
         </a>
-    
+
         <nav class="navbar">
             <a href="#home">home</a>
             <a href="#about">about</a>
@@ -33,35 +33,36 @@
             <a href="#contact">contact</a>
             <a href="#blogs">blogs</a>
         </nav>
-       
-    
+
+
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn"></div>
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
-    
+
         <div style="width: 15%; display: flex; align-items: center; ">
             <div class="dropdown">
                 <div style=" display: flex;  align-items: center; justify-content: space-between; font-size: medium;">
                     <div id="name_user" style="color: white; margin-right: 20px;"></div>
                     <div class="img_user">
-                         <img src="./images/young-user-icon.png" id="profile-img" width="40px" height="40px" style="height: 40px !important;">
+                        <img src="./images/young-user-icon.png" id="profile-img" width="40px" height="40px"
+                            style="height: 40px !important;">
                     </div>
                 </div>
                 <div class="dropdown-content">
-                <div class="btn-user" onclick="location.href='profile.html'">Profile</div>
-                <hr/>
-                <div class="btn-user" >Log out!</div>
+                    <div class="btn-user" onclick="location.href='profile.html'">Profile</div>
+                    <hr />
+                    <div class="btn-user">Log out!</div>
                 </div>
-              </div>
+            </div>
         </div>
-    
+
         <div class="search-form">
             <input type="search" id="search-box" placeholder="search here...">
             <label for="search-box" class="fas fa-search"></label>
         </div>
-    
+
         <div class="cart-items-container">
             <div class="cart-item">
                 <span class="fas fa-times"></span>
@@ -97,129 +98,137 @@
             </div>
             <a href="#" class="btn">checkout now</a>
         </div>
-    
+
     </header>
-    
+
     <div class="main-container">
         <h1>Cart</h1>
-        <div class="left-container">
-            <h2 style="font-size: 25px !important;">Cart (5 items)</h2>
-            <div class="list-items">
-                <div class="item">
-                    <div class="image">
-                        <img src="/images/product-1.png" alt="" width="130px" height="172px">
-                    </div>
-                    <div class="content-item">
-                        <div class="row-content-item">
-                            <h2>Fresh Coffee 1</h2>
+        <h1 id="none_cart" style="display: none; font-size:large;">Not item in your cart</h1>
+        <div id="cart">
+            <div class="left-container">
+                <h2 style="font-size: 25px !important;">Cart (5 items)</h2>
+                <div class="list-items">
+                    <div class="item" id="item1">
+                        <hr />
 
-                            <div class="buttons-added">
-                                <input class="minus is-form" type="button" value="-">
-                                <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number"
-                                    value="1">
-                                <input class="plus is-form" type="button" value="+">
-                            </div>
+                        <div class="image">
+                            <img src="/images/product-1.png" alt="" width="130px" height="172px">
                         </div>
+                        <div class="content-item">
+                            <div class="row-content-item">
+                                <h2>Fresh Coffee 1</h2>
 
-                        <div class="row-content-item">
-                            <div class="btn-delete">
-                                <span class="iconify" data-icon="icomoon-free:bin" style="color: #699BF7;"></span>
-                                REMOVE ITEM
+                                <div class="buttons-added">
+                                    <input class="minus is-form" type="button" value="-">
+                                    <input aria-label="quantity" class="input-qty" max="10" min="1" name=""
+                                        type="number" value="1">
+                                    <input class="plus is-form" type="button" value="+">
+                                </div>
                             </div>
-                            <div class="price">$15.99</div>
-                        </div>
 
-                    </div>
-                </div>
-                <hr />
-                <div class="item">
-                    <div class="image">
-                        <img src="/images/product-1.png" alt="" width="130px" height="172px">
-                    </div>
-                    <div class="content-item">
-                        <div class="row-content-item">
-                            <h2>Fresh Coffee 1</h2>
-
-                            <div class="buttons-added">
-                                <input class="minus is-form" type="button" value="-">
-                                <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number"
-                                    value="1">
-                                <input class="plus is-form" type="button" value="+">
+                            <div class="row-content-item">
+                                <div class="btn-delete" onclick="deleteItem1()">
+                                    <span class="iconify" data-icon="icomoon-free:bin" style="color: #699BF7;"></span>
+                                    REMOVE ITEM
+                                </div>
+                                <div class="price">$15.99</div>
                             </div>
-                        </div>
 
-                        <div class="row-content-item">
-                            <div class="btn-delete">
-                                <span class="iconify" data-icon="icomoon-free:bin" style="color: #699BF7;"></span>
-                                REMOVE ITEM
-                            </div>
-                            <div class="price">$15.99</div>
                         </div>
-
                     </div>
 
-                </div>
-                <hr />
+                    <div class="item" id="item2">
+                        <hr />
 
-                <div class="item">
-                    <div class="image">
-                        <img src="/images/menu-1.png" alt="" width="130px" height="172px">
-                    </div>
-                    <div class="content-item">
-                        <div class="row-content-item">
-                            <h2>Fresh Coffee 1</h2>
-
-                            <div class="buttons-added">
-                                <input class="minus is-form" type="button" value="-">
-                                <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number"
-                                    value="1">
-                                <input class="plus is-form" type="button" value="+">
-                            </div>
+                        <div class="image">
+                            <img src="/images/product-1.png" alt="" width="130px" height="172px">
                         </div>
+                        <div class="content-item">
+                            <div class="row-content-item">
+                                <h2>Fresh Coffee 1</h2>
 
-                        <div class="row-content-item">
-                            <div class="btn-delete">
-                                <span class="iconify" data-icon="icomoon-free:bin" style="color: #699BF7;"></span>
-                                REMOVE ITEM
+                                <div class="buttons-added">
+                                    <input class="minus is-form" type="button" value="-">
+                                    <input aria-label="quantity" class="input-qty" max="10" min="1" name=""
+                                        type="number" value="1">
+                                    <input class="plus is-form" type="button" value="+">
+                                </div>
                             </div>
-                            <div class="price">$75.00</div>
+
+                            <div class="row-content-item">
+                                <div class="btn-delete" onclick="deleteItem2()">
+                                    <span class="iconify" data-icon="icomoon-free:bin" style="color: #699BF7;"></span>
+                                    REMOVE ITEM
+                                </div>
+                                <div class="price">$15.99</div>
+                            </div>
+
                         </div>
 
                     </div>
 
+
+                    <div class="item" id="item3">
+                        <hr />
+                        <div class="image">
+                            <img src="/images/menu-1.png" alt="" width="130px" height="172px">
+                        </div>
+                        <div class="content-item">
+                            <div class="row-content-item">
+                                <h2>Fresh Coffee 3</h2>
+
+                                <div class="buttons-added">
+                                    <input class="minus is-form" type="button" value="-">
+                                    <input aria-label="quantity" class="input-qty" max="10" min="1" name=""
+                                        type="number" value="1">
+                                    <input class="plus is-form" type="button" value="+">
+                                </div>
+                            </div>
+
+                            <div class="row-content-item">
+                                <div class="btn-delete" onclick="deleteItem3()">
+                                    <span class="iconify" data-icon="icomoon-free:bin" style="color: #699BF7;"></span>
+                                    REMOVE ITEM
+                                </div>
+                                <div class="price">$75.00</div>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="right-container">
-            <div class="summary-container">
-                <h2>Order Summary</h2>
-                <div class="summary-item">
-                    <h4>Fresh Coffee 1</h4>
-                    <div>x1</div>
-                    <div class="price">$15.99</div>
+            <div class="right-container">
+                <div class="summary-container">
+                    <h2>Order Summary</h2>
+                    <div class="summary-item" id="summary-item1">
+                        <h4>Fresh Coffee 1</h4>
+                        <div>x1</div>
+                        <div class="price" id="price1">$15.99</div>
+                    </div>
+
+                    <div class="summary-item" id="summary-item2">
+                        <h4>Fresh Coffee 1</h4>
+                        <div>x1</div>
+                        <div class="price" id="price2">$15.99</div>
+                    </div>
+
+                    <div class="summary-item" id="summary-item3">
+                        <h4>Fresh Coffee 3</h4>
+                        <div>x3</div>
+                        <div class="price" 3 id="price">$75.00</div>
+                    </div>
+                    <hr>
+                    <div class="summary">
+                        <h4>Total amount (including TAX)</h4>
+                        <div class="price" id="total">$106.98</div>
+                    </div>
                 </div>
-               
-                <div class="summary-item">
-                    <h4>Fresh Coffee 1</h4>
-                    <div>x1</div>
-                    <div class="price">$15.99</div>
+                <div class="submit">
+                    <!-- <input type="submit" value="SIGN IN" onclick="loginSubmit()"/> -->
+                    <input type="button" value="Go To Checkout" onclick="location.href='checkout.html'" />
                 </div>
-               
-                <div class="summary-item">
-                    <h4>Fresh Coffee 1</h4>
-                    <div>x3</div>
-                    <div class="price">$75.00</div>
-                </div>
-                <hr>
-                <div class="summary">
-                    <h4>Total amount (including TAX)</h4>
-                    <div class="price">$106.98</div>
-                </div>
-            </div>
-            <div class="submit">
-                <!-- <input type="submit" value="SIGN IN" onclick="loginSubmit()"/> -->
-                <input type="button" value="Go To Checkout" onclick="location.href='checkout.html'"/>
             </div>
         </div>
     </div>
