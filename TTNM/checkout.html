@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body  onload="load()">
     <div class="nav">
         <div class="logo">
             <a href="index.html">
@@ -53,19 +53,19 @@
                     <h2>Bill Detail</h2>
                     <div class="form-sub">
                         <label for="currentPassword">Name</label>
-                        <input type="text" id="currentPassword" name="password" autofocus>
+                        <input type="text" id="name" name="password" autofocus>
                     </div>
                     <div class="form-sub">
                         <label for="currentPassword">Phone</label>
-                        <input type="text" id="currentPassword" name="password" autofocus>
+                        <input type="text" id="phone" name="password" autofocus>
                     </div>
                     <div class="form-sub">
                         <label for="currentPassword">Email</label>
-                        <input type="text" id="currentPassword" name="password" autofocus>
+                        <input type="text" id="email" name="password" autofocus>
                     </div>
                     <div class="form-sub">
                         <label for="currentPassword">Address</label>
-                        <input type="text" id="currentPassword" name="password" autofocus>
+                        <input type="text" id="address" name="password" autofocus>
                     </div>
                     <div class="form-sub">
                         <label for="currentPassword">Addtional Information</label>
@@ -182,11 +182,11 @@
                 <div class="bill-detail">
                     <h2>Delivery To</h2>
                     <div style="display: inline-flex; margin-top: 20px; margin-bottom: 10px;">
-                        <h4>Name </h4> &nbsp
+                        <h4 id="inf_name">Name </h4> &nbsp
                         <hr width="20px">&nbsp
-                        <h4>Phone</h4>
+                        <h4 id="inf_phone">Phone</h4>
                     </div>
-                    <div >Address</div>
+                    <div id="inf_address">Address</div>
                 </div>
                
                 <div class="bill-detail">
