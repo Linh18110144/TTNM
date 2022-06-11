@@ -31,3 +31,7 @@ window.onscroll = () =>{
 function load(){
     document.getElementById('name_user').innerHTML=localStorage.getItem('username');
 }
+
+function add(){
+    alert('The product has been added to cart.');
+}
